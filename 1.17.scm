@@ -6,6 +6,10 @@
 ;;to know if invariants are calculable from a recursive definition, or if 
 ;;finding them is just part of the art of problem solving.
 
+;; Also the examples on the wiki use recursion, which according to the phrasing
+;;of the question is totally legal. Oh, well. Iteration is more efficient
+;;anyway!
+
 (define (double x) (* x 2))
 
 (define (halve x) (/ x 2))
