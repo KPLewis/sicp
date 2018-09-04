@@ -12,7 +12,8 @@
 
 ; Use invariant x+ab
 (define (mult a b)
-  (if (even? b) 
-      (double (mult a (halve b)))
-      (+ a (* a (- b 1)))))
-      
+  (define (iter x a b)
+    (cond ((= b 1) (+ x a))
+	  ((even? b) (iter x (double a) (halve b)))
+	  (else (iter (+ x a) a (- b 1)))))
+  (iter 0 a b))
